@@ -5,6 +5,8 @@
  */
 package sistema.vista;
 
+import java.awt.Dimension;
+import java.awt.Toolkit;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -24,6 +26,11 @@ public class frmTablaOdontologo extends javax.swing.JFrame {
      */
     public frmTablaOdontologo() {
         initComponents();
+        Dimension pantalla = Toolkit.getDefaultToolkit().getScreenSize();
+        int height = pantalla.height;
+        int width = pantalla.width;
+        pantalla.setSize(width/2, height/2);
+        setLocationRelativeTo(null);
         try 
         {
             DefaultTableModel modelo = new DefaultTableModel();

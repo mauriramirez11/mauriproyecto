@@ -5,6 +5,8 @@
  */
 package sistema.vista;
 
+import java.awt.Dimension;
+import java.awt.Toolkit;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -24,7 +26,11 @@ public class frmTablaPaciente extends javax.swing.JFrame {
      */
     public frmTablaPaciente() {
         initComponents();
-        
+        Dimension pantalla = Toolkit.getDefaultToolkit().getScreenSize();
+        int height = pantalla.height;
+        int width = pantalla.width;
+        pantalla.setSize(width/2, height/2);
+        setLocationRelativeTo(null);
         
         try 
         {

@@ -5,6 +5,8 @@
  */
 package sistema.vista;
 
+import java.awt.Dimension;
+import java.awt.Toolkit;
 import sistema.consulta.consultaOdontologo;
 import sistema.consulta.consultaPaciente;
 import sistema.controlador.controladorOdontologo;
@@ -23,6 +25,11 @@ public class frmPrincipal extends javax.swing.JFrame {
      */
     public frmPrincipal() {
         initComponents();
+        Dimension pantalla = Toolkit.getDefaultToolkit().getScreenSize();
+        int height = pantalla.height;
+        int width = pantalla.width;
+        pantalla.setSize(width/2, height/2);
+        setLocationRelativeTo(null);
     }
 
     /**

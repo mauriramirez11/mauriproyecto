@@ -5,6 +5,8 @@
  */
 package sistema.vista;
 
+import java.awt.Dimension;
+import java.awt.Toolkit;
 import sistema.controlador.controladorSesion;
 import sistema.modelo.modUsuario;
 import sistema.consulta.consultaValidarSesion;
@@ -20,6 +22,11 @@ public class frmLogin extends javax.swing.JFrame {
      */
     public frmLogin() {
         initComponents();
+        Dimension pantalla = Toolkit.getDefaultToolkit().getScreenSize();
+        int height = pantalla.height;
+        int width = pantalla.width;
+        pantalla.setSize(width/2, height/2);
+        setLocationRelativeTo(null);
     }
 
     /**

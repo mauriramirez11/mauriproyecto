@@ -5,6 +5,9 @@
  */
 package sistema.vista;
 
+import java.awt.Dimension;
+import java.awt.Toolkit;
+
 /**
  *
  * @author Administrator
@@ -16,6 +19,11 @@ public class frmTabla extends javax.swing.JFrame {
      */
     public frmTabla() {
         initComponents();
+        Dimension pantalla = Toolkit.getDefaultToolkit().getScreenSize();
+        int height = pantalla.height;
+        int width = pantalla.width;
+        pantalla.setSize(width/2, height/2);
+        setLocationRelativeTo(null);
     }
 
     /**

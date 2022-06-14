@@ -6,6 +6,8 @@
 package sistema.vista;
 
 
+import java.awt.Dimension;
+import java.awt.Toolkit;
 import java.awt.event.ItemEvent;
 import java.awt.event.ItemEvent;
 import javax.swing.DefaultComboBoxModel;
@@ -29,6 +31,10 @@ public class frmPaciente extends javax.swing.JFrame {
     
     public frmPaciente() {
         initComponents();
+        Dimension pantalla = Toolkit.getDefaultToolkit().getScreenSize();
+        int height = pantalla.height;
+        int width = pantalla.width;
+        pantalla.setSize(width/2, height/2);
         setLocationRelativeTo(null);
         modPais cc = new modPais();
         

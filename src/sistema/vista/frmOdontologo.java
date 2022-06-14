@@ -5,6 +5,8 @@
  */
 package sistema.vista;
 
+import java.awt.Dimension;
+import java.awt.Toolkit;
 import java.awt.event.ItemEvent;
 import javax.swing.DefaultComboBoxModel;
 import sistema.consulta.consultaCiudad;
@@ -28,6 +30,10 @@ public class frmOdontologo extends javax.swing.JFrame {
     
     public frmOdontologo() {
         initComponents();
+        Dimension pantalla = Toolkit.getDefaultToolkit().getScreenSize();
+        int height = pantalla.height;
+        int width = pantalla.width;
+        pantalla.setSize(width/2, height/2);
         setLocationRelativeTo(null);
         modPais paisito = new modPais();
        
